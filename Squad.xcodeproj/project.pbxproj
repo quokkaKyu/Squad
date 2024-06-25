@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23EAB4BA2C2AA0BF00E2ED54 /* SquadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4B92C2AA0BF00E2ED54 /* SquadApp.swift */; };
 		23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */; };
 		23EAB4BE2C2AA0C200E2ED54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */; };
 		23EAB4C12C2AA0C200E2ED54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */; };
 		23EAB4CB2C2AA0C400E2ED54 /* SquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */; };
 		23EAB4D52C2AA0C400E2ED54 /* SquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4D42C2AA0C400E2ED54 /* SquadUITests.swift */; };
 		23EAB4D72C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */; };
+		23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */; };
+		23EAB4EF2C2AA6A200E2ED54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		23EAB4B62C2AA0BE00E2ED54 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23EAB4B92C2AA0BF00E2ED54 /* SquadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadApp.swift; sourceTree = "<group>"; };
 		23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +44,9 @@
 		23EAB4D02C2AA0C400E2ED54 /* SquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAB4D42C2AA0C400E2ED54 /* SquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITests.swift; sourceTree = "<group>"; };
 		23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		23EAB4F02C2AA8C200E2ED54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,20 +97,17 @@
 		23EAB4B82C2AA0BE00E2ED54 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
-				23EAB4B92C2AA0BF00E2ED54 /* SquadApp.swift */,
-				23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */,
-				23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */,
-				23EAB4BF2C2AA0C200E2ED54 /* Preview Content */,
+				23EAB4F02C2AA8C200E2ED54 /* Info.plist */,
+				23EAB4E32C2AA57800E2ED54 /* System */,
+				23EAB4E42C2AA58C00E2ED54 /* Utilities */,
+				23EAB4E52C2AA5AB00E2ED54 /* Injected */,
+				23EAB4E72C2AA5CB00E2ED54 /* Repositories */,
+				23EAB4E82C2AA5DD00E2ED54 /* Interactors */,
+				23EAB4E92C2AA5EE00E2ED54 /* Models */,
+				23EAB4EA2C2AA60600E2ED54 /* UI */,
+				23EAB4EB2C2AA61200E2ED54 /* Resources */,
 			);
 			path = Squad;
-			sourceTree = "<group>";
-		};
-		23EAB4BF2C2AA0C200E2ED54 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		23EAB4C92C2AA0C400E2ED54 /* SquadTests */ = {
@@ -125,6 +125,67 @@
 				23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */,
 			);
 			path = SquadUITests;
+			sourceTree = "<group>";
+		};
+		23EAB4E32C2AA57800E2ED54 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */,
+				23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		23EAB4E42C2AA58C00E2ED54 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		23EAB4E52C2AA5AB00E2ED54 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		23EAB4E72C2AA5CB00E2ED54 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		23EAB4E82C2AA5DD00E2ED54 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		23EAB4E92C2AA5EE00E2ED54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23EAB4EA2C2AA60600E2ED54 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		23EAB4EB2C2AA61200E2ED54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */,
+				23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */,
 				23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */,
-				23EAB4BA2C2AA0BF00E2ED54 /* SquadApp.swift in Sources */,
+				23EAB4EF2C2AA6A200E2ED54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,11 +483,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Squad/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Squad/Resources";
 				DEVELOPMENT_TEAM = C32HXR7766;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Squad/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -455,11 +517,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Squad/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Squad/Resources";
 				DEVELOPMENT_TEAM = C32HXR7766;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Squad/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
