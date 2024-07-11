@@ -6,8 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    private let container: DIContainer
+    private let isRunningTests: Bool
+    
+    init(container: DIContainer, isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
+        self.container = container
+        self.isRunningTests = isRunningTests
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +30,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(container: .preview)
 }

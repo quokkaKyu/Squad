@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C6294E2C36A6F000075273 /* PlayerDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6294D2C36A6F000075273 /* PlayerDBRepository.swift */; };
+		23C629502C36A77700075273 /* PlayersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6294F2C36A77700075273 /* PlayersInteractor.swift */; };
+		23C629522C36A79400075273 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C629512C36A79400075273 /* Models.swift */; };
 		23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */; };
 		23EAB4BE2C2AA0C200E2ED54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */; };
 		23EAB4C12C2AA0C200E2ED54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */; };
@@ -15,6 +18,15 @@
 		23EAB4D72C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */; };
 		23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */; };
 		23EAB4EF2C2AA6A200E2ED54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */; };
+		23EAB4F22C2AAAC000E2ED54 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4F12C2AAAC000E2ED54 /* AppState.swift */; };
+		23EAB4F42C2AAC6500E2ED54 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4F32C2AAC6500E2ED54 /* InteractorsContainer.swift */; };
+		23EAB4F62C2AAC9300E2ED54 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4F52C2AAC9300E2ED54 /* DIContainer.swift */; };
+		23EAB4F82C2AAD0E00E2ED54 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4F72C2AAD0E00E2ED54 /* Store.swift */; };
+		23EAB4FA2C2AAE0200E2ED54 /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4F92C2AAE0200E2ED54 /* RootViewModifier.swift */; };
+		23EAB5002C2AC1BD00E2ED54 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4FF2C2AC1BD00E2ED54 /* AppEnvironment.swift */; };
+		23EAB5022C2ACB4A00E2ED54 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB5012C2ACB4A00E2ED54 /* Helpers.swift */; };
+		23EBA24F2C3B60D60059F064 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 23EBA24E2C3B60D60059F064 /* SQLite */; };
+		23EBA2522C3B627E0059F064 /* SQLiteStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EBA2512C3B627E0059F064 /* SQLiteStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C6294D2C36A6F000075273 /* PlayerDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDBRepository.swift; sourceTree = "<group>"; };
+		23C6294F2C36A77700075273 /* PlayersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractor.swift; sourceTree = "<group>"; };
+		23C629512C36A79400075273 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		23EAB4B62C2AA0BE00E2ED54 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +61,15 @@
 		23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23EAB4F02C2AA8C200E2ED54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		23EAB4F02C2AA8C200E2ED54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23EAB4F12C2AAAC000E2ED54 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		23EAB4F32C2AAC6500E2ED54 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
+		23EAB4F52C2AAC9300E2ED54 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		23EAB4F72C2AAD0E00E2ED54 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		23EAB4F92C2AAE0200E2ED54 /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
+		23EAB4FF2C2AC1BD00E2ED54 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		23EAB5012C2ACB4A00E2ED54 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		23EBA2512C3B627E0059F064 /* SQLiteStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EBA24F2C3B60D60059F064 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +121,7 @@
 		23EAB4B82C2AA0BE00E2ED54 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
-				23EAB4F02C2AA8C200E2ED54 /* Info.plist */,
+				23EBA2502C3B61C50059F064 /* Persistence */,
 				23EAB4E32C2AA57800E2ED54 /* System */,
 				23EAB4E42C2AA58C00E2ED54 /* Utilities */,
 				23EAB4E52C2AA5AB00E2ED54 /* Injected */,
@@ -113,6 +137,7 @@
 		23EAB4C92C2AA0C400E2ED54 /* SquadTests */ = {
 			isa = PBXGroup;
 			children = (
+				23EBA2532C3BA8740059F064 /* Mocks */,
 				23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */,
 			);
 			path = SquadTests;
@@ -132,6 +157,7 @@
 			children = (
 				23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */,
 				23EAB4EE2C2AA6A200E2ED54 /* SceneDelegate.swift */,
+				23EAB4FF2C2AC1BD00E2ED54 /* AppEnvironment.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -139,6 +165,8 @@
 		23EAB4E42C2AA58C00E2ED54 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				23EAB4F72C2AAD0E00E2ED54 /* Store.swift */,
+				23EAB5012C2ACB4A00E2ED54 /* Helpers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -146,6 +174,9 @@
 		23EAB4E52C2AA5AB00E2ED54 /* Injected */ = {
 			isa = PBXGroup;
 			children = (
+				23EAB4F12C2AAAC000E2ED54 /* AppState.swift */,
+				23EAB4F32C2AAC6500E2ED54 /* InteractorsContainer.swift */,
+				23EAB4F52C2AAC9300E2ED54 /* DIContainer.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -153,6 +184,7 @@
 		23EAB4E72C2AA5CB00E2ED54 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				23C6294D2C36A6F000075273 /* PlayerDBRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -160,6 +192,7 @@
 		23EAB4E82C2AA5DD00E2ED54 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				23C6294F2C36A77700075273 /* PlayersInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -167,6 +200,7 @@
 		23EAB4E92C2AA5EE00E2ED54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23C629512C36A79400075273 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */,
+				23EAB4F92C2AAE0200E2ED54 /* RootViewModifier.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,10 +217,26 @@
 		23EAB4EB2C2AA61200E2ED54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23EAB4F02C2AA8C200E2ED54 /* Info.plist */,
 				23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */,
 				23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		23EBA2502C3B61C50059F064 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				23EBA2512C3B627E0059F064 /* SQLiteStack.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		23EBA2532C3BA8740059F064 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +255,9 @@
 			dependencies = (
 			);
 			name = Squad;
+			packageProductDependencies = (
+				23EBA24E2C3B60D60059F064 /* SQLite */,
+			);
 			productName = Squad;
 			productReference = 23EAB4B62C2AA0BE00E2ED54 /* Squad.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +330,9 @@
 				Base,
 			);
 			mainGroup = 23EAB4AD2C2AA0BE00E2ED54;
+			packageReferences = (
+				23EBA24D2C3B60D60059F064 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 23EAB4B72C2AA0BE00E2ED54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,9 +375,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAB4F82C2AAD0E00E2ED54 /* Store.swift in Sources */,
+				23C629522C36A79400075273 /* Models.swift in Sources */,
+				23C629502C36A77700075273 /* PlayersInteractor.swift in Sources */,
 				23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */,
+				23EAB4F42C2AAC6500E2ED54 /* InteractorsContainer.swift in Sources */,
+				23EAB5022C2ACB4A00E2ED54 /* Helpers.swift in Sources */,
+				23EBA2522C3B627E0059F064 /* SQLiteStack.swift in Sources */,
 				23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */,
+				23C6294E2C36A6F000075273 /* PlayerDBRepository.swift in Sources */,
 				23EAB4EF2C2AA6A200E2ED54 /* SceneDelegate.swift in Sources */,
+				23EAB4F62C2AAC9300E2ED54 /* DIContainer.swift in Sources */,
+				23EAB4F22C2AAAC000E2ED54 /* AppState.swift in Sources */,
+				23EAB4FA2C2AAE0200E2ED54 /* RootViewModifier.swift in Sources */,
+				23EAB5002C2AC1BD00E2ED54 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +744,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23EBA24D2C3B60D60059F064 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23EBA24E2C3B60D60059F064 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23EBA24D2C3B60D60059F064 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23EAB4AE2C2AA0BE00E2ED54 /* Project object */;
 }
