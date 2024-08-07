@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player {
+struct Player: Identifiable {
     let id: UUID
     let name: String
     let position: Position
