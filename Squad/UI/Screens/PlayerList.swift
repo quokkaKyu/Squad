@@ -9,13 +9,23 @@ import SwiftUI
 
 @MainActor
 struct PlayerList: View {
+    @Environment(\.injected) private var injected: DIContainer
     @State private(set) var players: [Player] = []
     var body: some View {
         VStack {
             List(players) { player in
                 PlayerCell(player: player)
             }
+            .onAppear(perform: {
+                load()
+            })
         }
+    }
+}
+
+extension PlayerList {
+    private func load() {
+        injected.interactors.playersInteractor.load(players: $players)
     }
 }
 

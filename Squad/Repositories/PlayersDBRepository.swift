@@ -1,5 +1,5 @@
 //
-//  PlayerDBRepository.swift
+//  PlayersDBRepository.swift
 //  Squad
 //
 //  Created by kyuminlee on 7/4/24.
@@ -9,14 +9,14 @@ import Foundation
 import Combine
 import SQLite
 
-protocol PlayerDBRepository {
+protocol PlayersDBRepository {
     func createPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error>
     func getPlayers() -> AnyPublisher<[Player], Error>
     func updatePlayer(id: UUID, newPosition: Player.Position) -> AnyPublisher<Void, Error>
     func deletePlayer(id: UUID) -> AnyPublisher<Void, Error>
 }
 
-class RealPlayerDBRepository: PlayerDBRepository {
+class RealPlayersDBRepository: PlayersDBRepository {
     private let persistentStore: PersistentStore
 
     init(persistentStore: PersistentStore) {

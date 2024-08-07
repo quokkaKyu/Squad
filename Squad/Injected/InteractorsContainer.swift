@@ -7,12 +7,14 @@
 
 extension DIContainer {
     struct Interactors {
+        let playersInteractor: PlayersInteractor
         
-        init() {
+        init(playersInteractor: PlayersInteractor) {
+            self.playersInteractor = playersInteractor
         }
         
         static var stub: Self {
-            .init()
+            .init(playersInteractor: StubPlayersInteractor())
         }
     }
 }
