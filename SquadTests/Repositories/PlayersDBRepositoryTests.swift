@@ -11,9 +11,9 @@ import Combine
 
 final class PlayersDBRepositoryTests: XCTestCase {
     
-    var mockedStore: PersistentStore!
-    var sut: RealPlayersDBRepository!
-    var cancelBag = Set<AnyCancellable>()
+    private var mockedStore: PersistentStore!
+    private var sut: RealPlayersDBRepository!
+    private var cancelBag = Set<AnyCancellable>()
     
     override func setUp() {
         mockedStore = SQLiteStack(dbLocation: .temporary)

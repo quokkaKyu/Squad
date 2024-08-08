@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */; };
 		23946AA52C644CF30052CAA7 /* PlayersDBRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */; };
+		23946AA92C64609C0052CAA7 /* PlayersInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AA82C64609C0052CAA7 /* PlayersInteractorTests.swift */; };
 		239CE36D2C61AA3E00E7ADB3 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */; };
 		239CE3752C61B11300E7ADB3 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3742C61B11300E7ADB3 /* PlayerCell.swift */; };
 		239CE3772C61B13F00E7ADB3 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3762C61B13F00E7ADB3 /* MockedData.swift */; };
@@ -18,7 +19,6 @@
 		23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */; };
 		23EAB4BE2C2AA0C200E2ED54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */; };
 		23EAB4C12C2AA0C200E2ED54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */; };
-		23EAB4CB2C2AA0C400E2ED54 /* SquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */; };
 		23EAB4D52C2AA0C400E2ED54 /* SquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4D42C2AA0C400E2ED54 /* SquadUITests.swift */; };
 		23EAB4D72C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */; };
 		23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAB4EC2C2AA69400E2ED54 /* AppDelegate.swift */; };
@@ -54,6 +54,7 @@
 /* Begin PBXFileReference section */
 		2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteStackTests.swift; sourceTree = "<group>"; };
 		23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDBRepositoryTests.swift; sourceTree = "<group>"; };
+		23946AA82C64609C0052CAA7 /* PlayersInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorTests.swift; sourceTree = "<group>"; };
 		239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 		239CE3742C61B11300E7ADB3 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		239CE3762C61B13F00E7ADB3 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		23EAB4BD2C2AA0C200E2ED54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23EAB4C02C2AA0C200E2ED54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23EAB4C62C2AA0C400E2ED54 /* SquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadTests.swift; sourceTree = "<group>"; };
 		23EAB4D02C2AA0C400E2ED54 /* SquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EAB4D42C2AA0C400E2ED54 /* SquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITests.swift; sourceTree = "<group>"; };
 		23EAB4D62C2AA0C400E2ED54 /* SquadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -122,6 +122,14 @@
 				23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		23946AA72C64606F0052CAA7 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				23946AA82C64609C0052CAA7 /* PlayersInteractorTests.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		239CE3722C61B0F300E7ADB3 /* Screens */ = {
@@ -183,8 +191,7 @@
 			children = (
 				2388EEF62C635A6000A9FC67 /* Persistence */,
 				23946AA32C644CC60052CAA7 /* Repositories */,
-				23EBA2532C3BA8740059F064 /* Mocks */,
-				23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */,
+				23946AA72C64606F0052CAA7 /* Interactors */,
 			);
 			path = SquadTests;
 			sourceTree = "<group>";
@@ -277,13 +284,6 @@
 				23EBA2512C3B627E0059F064 /* SQLiteStack.swift */,
 			);
 			path = Persistence;
-			sourceTree = "<group>";
-		};
-		23EBA2532C3BA8740059F064 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,8 +447,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				23946AA52C644CF30052CAA7 /* PlayersDBRepositoryTests.swift in Sources */,
+				23946AA92C64609C0052CAA7 /* PlayersInteractorTests.swift in Sources */,
 				2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */,
-				23EAB4CB2C2AA0C400E2ED54 /* SquadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
