@@ -12,10 +12,10 @@ struct Player: Identifiable {
     let name: String
     let position: Position
     
-    enum Position: String {
-        case striker = "striker"
-        case midfielder = "midfielder"
-        case defender = "defender"
-        case goalkeeper = "goalkeeper"
+    enum Position: String, CaseIterable {
+        case striker = "ST"
+        case midfielder = "MF"
+        case defender = "DF"
+        case goalkeeper = "GF"
     }
 }

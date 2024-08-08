@@ -12,6 +12,7 @@ struct ContentView: View {
     
     private let container: DIContainer
     private let isRunningTests: Bool
+    @State private var isNavigateAddView: Bool = false
     
     init(container: DIContainer, isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.container = container
@@ -19,8 +20,21 @@ struct ContentView: View {
     }
     
     var body: some View {
-        PlayerList()
-            .inject(container)
+        NavigationView {
+            VStack {
+                PlayerList()
+                    .inject(container)
+            }
+            .toolbar(content: {
+                NavigationLink(isActive: $isNavigateAddView, destination: {
+                    PlayerAddView(isNavigate: $isNavigateAddView)
+                        .inject(container)
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            })
+            .navigationTitle("Player List")
+        }
     }
 }
 

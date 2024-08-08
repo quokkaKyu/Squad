@@ -10,6 +10,7 @@
 		2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */; };
 		23946AA52C644CF30052CAA7 /* PlayersDBRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */; };
 		23946AA92C64609C0052CAA7 /* PlayersInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AA82C64609C0052CAA7 /* PlayersInteractorTests.swift */; };
+		23946AB12C649DB00052CAA7 /* PlayerAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AB02C649DB00052CAA7 /* PlayerAddView.swift */; };
 		239CE36D2C61AA3E00E7ADB3 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */; };
 		239CE3752C61B11300E7ADB3 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3742C61B11300E7ADB3 /* PlayerCell.swift */; };
 		239CE3772C61B13F00E7ADB3 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3762C61B13F00E7ADB3 /* MockedData.swift */; };
@@ -55,6 +56,7 @@
 		2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteStackTests.swift; sourceTree = "<group>"; };
 		23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDBRepositoryTests.swift; sourceTree = "<group>"; };
 		23946AA82C64609C0052CAA7 /* PlayersInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorTests.swift; sourceTree = "<group>"; };
+		23946AB02C649DB00052CAA7 /* PlayerAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAddView.swift; sourceTree = "<group>"; };
 		239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 		239CE3742C61B11300E7ADB3 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		239CE3762C61B13F00E7ADB3 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				23EAB4BB2C2AA0BF00E2ED54 /* ContentView.swift */,
-				23EAB4F92C2AAE0200E2ED54 /* RootViewModifier.swift */,
 				239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */,
+				23946AB02C649DB00052CAA7 /* PlayerAddView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -145,6 +147,7 @@
 		239CE3732C61B0F900E7ADB3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				23EAB4F92C2AAE0200E2ED54 /* RootViewModifier.swift */,
 				239CE3742C61B11300E7ADB3 /* PlayerCell.swift */,
 			);
 			path = Components;
@@ -429,6 +432,7 @@
 				23EAB4ED2C2AA69400E2ED54 /* AppDelegate.swift in Sources */,
 				23EAB4F42C2AAC6500E2ED54 /* InteractorsContainer.swift in Sources */,
 				23EAB5022C2ACB4A00E2ED54 /* Helpers.swift in Sources */,
+				23946AB12C649DB00052CAA7 /* PlayerAddView.swift in Sources */,
 				23EBA2522C3B627E0059F064 /* SQLiteStack.swift in Sources */,
 				23EAB4BC2C2AA0BF00E2ED54 /* ContentView.swift in Sources */,
 				239CE3752C61B11300E7ADB3 /* PlayerCell.swift in Sources */,
