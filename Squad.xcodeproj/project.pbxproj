@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */; };
 		239CE36D2C61AA3E00E7ADB3 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */; };
 		239CE3752C61B11300E7ADB3 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3742C61B11300E7ADB3 /* PlayerCell.swift */; };
 		239CE3772C61B13F00E7ADB3 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3762C61B13F00E7ADB3 /* MockedData.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteStackTests.swift; sourceTree = "<group>"; };
 		239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 		239CE3742C61B11300E7ADB3 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		239CE3762C61B13F00E7ADB3 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2388EEF62C635A6000A9FC67 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		239CE3722C61B0F300E7ADB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		23EAB4C92C2AA0C400E2ED54 /* SquadTests */ = {
 			isa = PBXGroup;
 			children = (
+				2388EEF62C635A6000A9FC67 /* Persistence */,
 				23EBA2532C3BA8740059F064 /* Mocks */,
 				23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */,
 			);
@@ -424,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */,
 				23EAB4CB2C2AA0C400E2ED54 /* SquadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

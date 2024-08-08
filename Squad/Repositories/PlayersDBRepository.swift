@@ -10,8 +10,8 @@ import Combine
 import SQLite
 
 protocol PlayersDBRepository {
-    func createPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error>
-    func getPlayers() -> AnyPublisher<[Player], Error>
+    func addPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error>
+    func fetchPlayers() -> AnyPublisher<[Player], Error>
     func updatePlayer(id: UUID, newPosition: Player.Position) -> AnyPublisher<Void, Error>
     func deletePlayer(id: UUID) -> AnyPublisher<Void, Error>
 }
@@ -23,10 +23,10 @@ class RealPlayersDBRepository: PlayersDBRepository {
         self.persistentStore = persistentStore
     }
 
-    func createPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error> {
+    func addPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error> {
         Future { promise in
             do {
-                try self.persistentStore.createPlayer(name: name, position: position)
+                try self.persistentStore.addPlayer(name: name, position: position)
                 promise(.success(()))
             } catch {
                 promise(.failure(error))
@@ -35,10 +35,10 @@ class RealPlayersDBRepository: PlayersDBRepository {
         .eraseToAnyPublisher()
     }
 
-    func getPlayers() -> AnyPublisher<[Player], Error> {
+    func fetchPlayers() -> AnyPublisher<[Player], Error> {
         Future { promise in
             do {
-                let players = try self.persistentStore.getPlayers()
+                let players = try self.persistentStore.fetchPlayers()
                 promise(.success(players))
             } catch {
                 promise(.failure(error))

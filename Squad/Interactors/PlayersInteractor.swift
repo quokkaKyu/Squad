@@ -23,7 +23,7 @@ struct RealPlayersInteractor: PlayersInteractor {
     func load(players: Binding<[Player]>) {
         var cancelBag = Set<AnyCancellable>()
         
-        dbRepository.getPlayers()
+        dbRepository.fetchPlayers()
             .sink(receiveCompletion: { subscriptionCompletion in
                 print(subscriptionCompletion)
             }, receiveValue: { playerList in

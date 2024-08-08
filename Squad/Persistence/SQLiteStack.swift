@@ -9,8 +9,8 @@ import Foundation
 import SQLite
 
 protocol PersistentStore {
-    func createPlayer(name: String, position: Player.Position) throws
-    func getPlayers() throws -> [Player]
+    func addPlayer(name: String, position: Player.Position) throws
+    func fetchPlayers() throws -> [Player]
     func updatePlayer(id: UUID, newPosition: Player.Position) throws
     func deletePlayer(id: UUID) throws
 }
@@ -23,6 +23,16 @@ final class SQLiteStack: PersistentStore {
     private let name = Expression<String>("name")
     private let position = Expression<String>("position")
 
+    init(dbLocation: Connection.Location) {
+        do {
+            db = try Connection(dbLocation)
+            try createTable()
+        } catch {
+            db = nil
+            print("Unable to open database. Error: \(error)")
+        }
+    }
+    
     init() {
         do {
             let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -43,14 +53,14 @@ final class SQLiteStack: PersistentStore {
         })
     }
 
-    func createPlayer(name: String, position: Player.Position) throws {
+    func addPlayer(name: String, position: Player.Position) throws {
         guard let db = db else { throw NSError(domain: "DatabaseError", code: 1, userInfo: nil) }
 
         let insert = players.insert(self.id <- UUID().uuidString, self.name <- name, self.position <- position.rawValue)
         try db.run(insert)
     }
 
-    func getPlayers() throws -> [Player] {
+    func fetchPlayers() throws -> [Player] {
         guard let db = db else { throw NSError(domain: "DatabaseError", code: 1, userInfo: nil) }
 
         var playersList = [Player]()
