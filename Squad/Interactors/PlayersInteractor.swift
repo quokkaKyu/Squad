@@ -11,6 +11,9 @@ import Combine
 
 protocol PlayersInteractor {
     func load(players: Binding<[Player]>)
+    func add(name: String, position: Player.Position)
+    func update(id: UUID, position: Player.Position)
+    func delete(id: UUID)
 }
 
 struct RealPlayersInteractor: PlayersInteractor {
@@ -31,10 +34,58 @@ struct RealPlayersInteractor: PlayersInteractor {
             })
         .store(in: &cancelBag)
     }
+    
+    func add(name: String, position: Player.Position) {
+        var cancelBag = Set<AnyCancellable>()
+        
+        dbRepository.addPlayer(name: name, position: position)
+            .sink(receiveCompletion: { subscriptionCompletion in
+                print(subscriptionCompletion)
+            }, receiveValue: { _ in
+                
+            })
+        .store(in: &cancelBag)
+    }
+    
+    func update(id: UUID, position: Player.Position) {
+        var cancelBag = Set<AnyCancellable>()
+        
+        dbRepository.updatePlayer(id: id, newPosition: position)
+            .sink(receiveCompletion: { subscriptionCompletion in
+                print(subscriptionCompletion)
+            }, receiveValue: { _ in
+                
+            })
+        .store(in: &cancelBag)
+    }
+    
+    func delete(id: UUID) {
+        var cancelBag = Set<AnyCancellable>()
+        
+        dbRepository.deletePlayer(id: id)
+            .sink(receiveCompletion: { subscriptionCompletion in
+                print(subscriptionCompletion)
+            }, receiveValue: { _ in
+                
+            })
+        .store(in: &cancelBag)
+    }
 }
 
 struct StubPlayersInteractor: PlayersInteractor {
     func load(players: Binding<[Player]>) {
         players.wrappedValue = Player.mockedData
+    }
+    
+    func add(name: String, position: Player.Position) {
+        
+    }
+    
+    func update(id: UUID, position: Player.Position) {
+        
+    }
+    
+    func delete(id: UUID) {
+        
     }
 }
