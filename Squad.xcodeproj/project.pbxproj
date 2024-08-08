@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */; };
+		23946AA52C644CF30052CAA7 /* PlayersDBRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */; };
 		239CE36D2C61AA3E00E7ADB3 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */; };
 		239CE3752C61B11300E7ADB3 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3742C61B11300E7ADB3 /* PlayerCell.swift */; };
 		239CE3772C61B13F00E7ADB3 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CE3762C61B13F00E7ADB3 /* MockedData.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		2388EEF72C635A8200A9FC67 /* SQLiteStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteStackTests.swift; sourceTree = "<group>"; };
+		23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDBRepositoryTests.swift; sourceTree = "<group>"; };
 		239CE36C2C61AA3E00E7ADB3 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 		239CE3742C61B11300E7ADB3 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		239CE3762C61B13F00E7ADB3 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		23946AA32C644CC60052CAA7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				23946AA42C644CF30052CAA7 /* PlayersDBRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		239CE3722C61B0F300E7ADB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2388EEF62C635A6000A9FC67 /* Persistence */,
+				23946AA32C644CC60052CAA7 /* Repositories */,
 				23EBA2532C3BA8740059F064 /* Mocks */,
 				23EAB4CA2C2AA0C400E2ED54 /* SquadTests.swift */,
 			);
@@ -435,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23946AA52C644CF30052CAA7 /* PlayersDBRepositoryTests.swift in Sources */,
 				2388EEF82C635A8200A9FC67 /* SQLiteStackTests.swift in Sources */,
 				23EAB4CB2C2AA0C400E2ED54 /* SquadTests.swift in Sources */,
 			);

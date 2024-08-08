@@ -10,7 +10,7 @@ import Combine
 import SQLite
 
 protocol PlayersDBRepository {
-    func addPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error>
+    func addPlayer(name: String, position: Player.Position) -> AnyPublisher<Void, Error>
     func fetchPlayers() -> AnyPublisher<[Player], Error>
     func updatePlayer(id: UUID, newPosition: Player.Position) -> AnyPublisher<Void, Error>
     func deletePlayer(id: UUID) -> AnyPublisher<Void, Error>
@@ -23,7 +23,7 @@ class RealPlayersDBRepository: PlayersDBRepository {
         self.persistentStore = persistentStore
     }
 
-    func addPlayer(id: UUID, name: String, position: Player.Position) -> AnyPublisher<Void, Error> {
+    func addPlayer(name: String, position: Player.Position) -> AnyPublisher<Void, Error> {
         Future { promise in
             do {
                 try self.persistentStore.addPlayer(name: name, position: position)

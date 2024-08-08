@@ -12,7 +12,6 @@ import Combine
 final class SQLiteStackTests: XCTestCase {
     
     var sut: SQLiteStack!
-    var cancelBag = Set<AnyCancellable>()
     
     override func setUp() {
         sut = nil
@@ -20,7 +19,6 @@ final class SQLiteStackTests: XCTestCase {
     }
     
     override func tearDown() {
-        cancelBag = Set<AnyCancellable>()
         sut = nil
     }
     
