@@ -16,6 +16,6 @@ struct Player: Identifiable {
         case striker = "ST"
         case midfielder = "MF"
         case defender = "DF"
-        case goalkeeper = "GF"
+        case goalkeeper = "GK"
     }
 }

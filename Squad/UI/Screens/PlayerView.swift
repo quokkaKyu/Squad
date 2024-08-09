@@ -1,5 +1,5 @@
 //
-//  PlayerAddView.swift
+//  PlayerView.swift
 //  Squad
 //
 //  Created by kyuminlee on 8/8/24.
@@ -7,13 +7,26 @@
 
 import SwiftUI
 
-struct PlayerAddView: View {
+struct PlayerView: View {
     @Environment(\.injected) private var injected: DIContainer
+    @Environment(\.presentationMode) private var presentationMode
     
-    @State private var name: String = ""
+    let viewType: ViewType
+    let id: UUID?
+    @State var name: String = ""
     @State private var position: Player.Position = .striker
     
-    @Binding var isNavigate: Bool
+    enum ViewType {
+        case add
+        case update
+        
+        var navigationTitle: String {
+            switch self {
+            case .add: return "Add Player"
+            case .update: return "Update Player"
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,37 +52,38 @@ struct PlayerAddView: View {
         }
         .padding(.horizontal, 20)
         .toolbar {
-            ToolbarItem(placement: .topBarLeading, content: {
-                Button(action: {
-                    back()
-                }, label: {
-                    Text("Back")
-                })
-            })
             ToolbarItem(placement: .topBarTrailing, content: {
                 Button(action: {
-                    add(name: name, position: position)
+                    switch viewType {
+                    case .add:
+                        add(name: name, position: position)
+                    case .update:
+                        update(id: id, position: position)
+                    }
+                    presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Confirm")
                 })
             })
         }
-        .navigationTitle("Add Player")
-        .navigationBarBackButtonHidden()
+        .navigationTitle(viewType.navigationTitle)
     }
 }
 
-private extension PlayerAddView {
+private extension PlayerView {
     func add(name: String, position: Player.Position) {
         injected.interactors.playersInteractor.add(name: name, position: position)
-        isNavigate = false
     }
     
-    func back() {
-        isNavigate = false
+    func update(id: UUID?, position: Player.Position) {
+        if let id = id {
+            injected.interactors.playersInteractor.update(id: id, position: position)
+        } else {
+            print("fail")
+        }
     }
 }
 
 #Preview {
-    PlayerAddView(isNavigate: .constant(true))
+    PlayerView(viewType: .add, id: nil)
 }

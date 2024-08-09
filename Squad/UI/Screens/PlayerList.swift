@@ -14,7 +14,12 @@ struct PlayerList: View {
     var body: some View {
         VStack {
             List(players) { player in
-                PlayerCell(player: player)
+                NavigationLink(destination: {
+                    PlayerView(viewType: .update, id: player.id, name: player.name)
+                        .inject(injected)
+                }, label: {
+                    PlayerCell(player: player)
+                })
             }
             .onAppear(perform: {
                 load()
