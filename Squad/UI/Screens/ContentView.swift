@@ -24,12 +24,17 @@ struct ContentView: View {
                     .inject(container)
             }
             .toolbar(content: {
-                NavigationLink(destination: {
-                    PlayerView(viewType: .add, id: nil)
-                        .inject(container)
-                }, label: {
-                    Image(systemName: "plus")
+                ToolbarItemGroup(placement: .topBarTrailing, content: {
+                    EditButton()
+                    NavigationLink(destination: {
+                        PlayerView(player: nil)
+                            .inject(container)
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                    
                 })
+                
             })
             .navigationTitle("Player List")
         }

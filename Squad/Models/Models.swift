@@ -9,8 +9,8 @@ import Foundation
 
 struct Player: Identifiable {
     let id: UUID
-    let name: String
-    let position: Position
+    var name: String
+    var position: Position
     
     enum Position: String, CaseIterable {
         case striker = "ST"

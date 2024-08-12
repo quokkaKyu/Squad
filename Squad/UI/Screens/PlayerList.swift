@@ -13,12 +13,17 @@ struct PlayerList: View {
     @State private(set) var players: [Player] = []
     var body: some View {
         VStack {
-            List(players) { player in
-                NavigationLink(destination: {
-                    PlayerView(viewType: .update, id: player.id, name: player.name)
-                        .inject(injected)
-                }, label: {
-                    PlayerCell(player: player)
+            List {
+                ForEach(players) { player in
+                    NavigationLink(destination: {
+                        PlayerView(player: player)
+                            .inject(injected)
+                    }, label: {
+                        PlayerCell(player: player)
+                    })
+                }
+                .onDelete(perform: { indexSet in
+                    delete(players: $players, atOffsets: indexSet)
                 })
             }
             .onAppear(perform: {
@@ -28,9 +33,14 @@ struct PlayerList: View {
     }
 }
 
-extension PlayerList {
-    private func load() {
+private extension PlayerList {
+    func load() {
         injected.interactors.playersInteractor.load(players: $players)
+    }
+    
+    func delete(players: Binding<[Player]>, atOffsets: IndexSet) {
+        injected.interactors.playersInteractor.delete(players: players.wrappedValue, atOffsets: atOffsets)
+        players.wrappedValue.remove(atOffsets: atOffsets)
     }
 }
 

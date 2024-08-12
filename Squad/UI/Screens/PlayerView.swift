@@ -11,10 +11,18 @@ struct PlayerView: View {
     @Environment(\.injected) private var injected: DIContainer
     @Environment(\.presentationMode) private var presentationMode
     
-    let viewType: ViewType
-    let id: UUID?
-    @State var name: String = ""
-    @State private var position: Player.Position = .striker
+    @State private var player: Player
+    private let viewType: ViewType
+    
+    init(player: Player?) {
+        if let player = player {
+            self.player = player
+            viewType = .update
+        } else {
+            self.player = Player(id: UUID(), name: "", position: .striker)
+            viewType = .add
+        }
+    }
     
     enum ViewType {
         case add
@@ -33,14 +41,20 @@ struct PlayerView: View {
             HStack {
                 Text("Name")
                     .frame(width: 100, alignment: .leading)
-                TextField("Name", text: $name)
-                    .frame(minWidth: 100)
+                switch viewType {
+                case .add:
+                    TextField("Name", text: $player.name)
+                        .frame(minWidth: 100)
+                case .update:
+                    Text(player.name)
+                        .frame(minWidth: 100, alignment: .leading)
+                }
             }
             
             HStack {
                 Text("Position")
                     .frame(width: 100, alignment: .leading)
-                Picker("Choose a position", selection: $position) {
+                Picker("Choose a position", selection: $player.position) {
                     ForEach(Player.Position.allCases, id: \.self) { position in
                         Text(position.rawValue)
                     }
@@ -56,9 +70,9 @@ struct PlayerView: View {
                 Button(action: {
                     switch viewType {
                     case .add:
-                        add(name: name, position: position)
+                        add(name: player.name, position: player.position)
                     case .update:
-                        update(id: id, position: position)
+                        update(id: player.id, position: player.position)
                     }
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
@@ -76,14 +90,10 @@ private extension PlayerView {
     }
     
     func update(id: UUID?, position: Player.Position) {
-        if let id = id {
-            injected.interactors.playersInteractor.update(id: id, position: position)
-        } else {
-            print("fail")
-        }
+        injected.interactors.playersInteractor.update(id: id, position: position)
     }
 }
 
 #Preview {
-    PlayerView(viewType: .add, id: nil)
+    PlayerView(player: nil)
 }

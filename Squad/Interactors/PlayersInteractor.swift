@@ -12,8 +12,8 @@ import Combine
 protocol PlayersInteractor {
     func load(players: Binding<[Player]>)
     func add(name: String, position: Player.Position)
-    func update(id: UUID, position: Player.Position)
-    func delete(id: UUID)
+    func update(id: UUID?, position: Player.Position)
+    func delete(players: [Player], atOffsets: IndexSet)
 }
 
 struct RealPlayersInteractor: PlayersInteractor {
@@ -47,7 +47,15 @@ struct RealPlayersInteractor: PlayersInteractor {
         .store(in: &cancelBag)
     }
     
-    func update(id: UUID, position: Player.Position) {
+    func update(id: UUID?, position: Player.Position) {
+        if let id = id {
+            update(id: id, position: position)
+        } else {
+            print("update fail")
+        }
+    }
+    
+    private func update(id: UUID, position: Player.Position) {
         var cancelBag = Set<AnyCancellable>()
         
         dbRepository.updatePlayer(id: id, newPosition: position)
@@ -59,7 +67,15 @@ struct RealPlayersInteractor: PlayersInteractor {
         .store(in: &cancelBag)
     }
     
-    func delete(id: UUID) {
+    func delete(players: [Player], atOffsets: IndexSet) {
+        if let index = atOffsets.first {
+            delete(id: players[index].id)
+        } else {
+            print("delete fail")
+        }
+    }
+    
+    private func delete(id: UUID) {
         var cancelBag = Set<AnyCancellable>()
         
         dbRepository.deletePlayer(id: id)
@@ -81,11 +97,11 @@ struct StubPlayersInteractor: PlayersInteractor {
         
     }
     
-    func update(id: UUID, position: Player.Position) {
+    func update(id: UUID?, position: Player.Position) {
         
     }
     
-    func delete(id: UUID) {
+    func delete(players: [Player], atOffsets: IndexSet) {
         
     }
 }
