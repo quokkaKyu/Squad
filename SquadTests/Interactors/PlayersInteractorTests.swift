@@ -57,14 +57,9 @@ final class PlayersInteractorTests: XCTestCase {
         
         XCTAssertEqual(playersBinding.wrappedValue.count, 1)
         
-        if let id = playersBinding.wrappedValue.first?.id {
-            sut.update(id: id, position: .midfielder)
-            sut.load(players: playersBinding)
-            
-            XCTAssertEqual(playersBinding.wrappedValue.first?.position, .midfielder)
-        } else {
-            XCTFail()
-        }
+        sut.update(id: playersBinding.wrappedValue.first?.id, position: .midfielder)
+        sut.load(players: playersBinding)
+        XCTAssertEqual(playersBinding.wrappedValue.first?.position, .midfielder)
     }
     
     func test_delete() throws {
@@ -72,14 +67,9 @@ final class PlayersInteractorTests: XCTestCase {
         sut.load(players: playersBinding)
         
         XCTAssertEqual(playersBinding.wrappedValue.count, 1)
-        
-        if let id = playersBinding.wrappedValue.first?.id {
-            sut.delete(id: id)
-            sut.load(players: playersBinding)
-            
-            XCTAssert(playersBinding.isEmpty)
-        } else {
-            XCTFail()
-        }
+        let atOffsets = IndexSet(playersBinding.wrappedValue.startIndex...playersBinding.wrappedValue.endIndex)
+        sut.delete(players: playersBinding.wrappedValue, atOffsets: atOffsets)
+        sut.load(players: playersBinding)
+        XCTAssert(playersBinding.isEmpty)
     }
 }
