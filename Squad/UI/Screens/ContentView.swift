@@ -21,23 +21,20 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 PlayerList()
-                    .inject(container)
             }
             .toolbar(content: {
                 ToolbarItemGroup(placement: .topBarTrailing, content: {
                     EditButton()
                     NavigationLink(destination: {
                         PlayerView(player: nil)
-                            .inject(container)
                     }, label: {
                         Image(systemName: "plus")
                     })
-                    
                 })
-                
             })
             .navigationTitle("Player List")
         }
+        .inject(container)
     }
 }
 

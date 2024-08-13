@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 struct PlayerList: View {
     @Environment(\.injected) private var injected: DIContainer
     @State private(set) var players: [Player] = []
